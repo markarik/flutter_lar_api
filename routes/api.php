@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('/products','ProductController')->only('index');
-Route::apiResource('/product','ProductController')->only(['show','destroy','update']);
+Route::apiResource('/product','ProductController')->only(['show','destroy','update','store']);
 
 Route::prefix('products')->group(function (){
 
