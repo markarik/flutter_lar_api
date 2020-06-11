@@ -9,6 +9,6 @@ class Review extends Model
     protected $fillable = ['customer', 'review', 'product_id', 'star'];
     public function product()
     {
-        return $this->belongsTo('Product','product_id','id');
+        return $this->belongsTo(Product::class,'product_id','id');
     }
 }
