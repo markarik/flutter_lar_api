@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('/products','ProductController')->only('index');
+Route::apiResource('/product','ProductController')->only(['show','destroy','update']);
+
+Route::prefix('products')->group(function (){
+
+    Route::apiResource('/{product}/reviews','ReviewController');
+
+});
