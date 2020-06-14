@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Exceptions\ProductNotBelongsToUser;
 use App\Http\Requests\ProductRequest;
-//use App\Http\Resources\Product\ProductCollection;
 use App\Http\Resources\Product\ProductIndexResource;
 use App\Http\Resources\Product\ProductResource;
 use App\Model\Product;
